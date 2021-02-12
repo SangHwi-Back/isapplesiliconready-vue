@@ -2,7 +2,7 @@
   <div id="app">
     <HeaderComponents v-bind:propsLikes="likes"></HeaderComponents>
     <SearchBodyComponent></SearchBodyComponent>
-    <ListComponent v-bind:propsTabs="tabs" v-bind:propsList="list"></ListComponent>
+    <ListComponent v-bind:propsTabs="tabs" v-bind:propsList="list" v-bind:propsTheads="heads"></ListComponent>
   </div>
 </template>
 
@@ -43,7 +43,8 @@ export default {
         {'iconName': 'fas fa-chevron-right', 'ApplicationName': 'Phocus', 'Developer': 'hasselblad', 'M1Optimized': true, 'Rosseta2': true, 'M1SupportedVersion': '3.5.6', 'LastUpdate': 'Jan 30,2021', 'Contribute': ''}
       ],
       likes: 220,
-      tabs: ['NATIVE M1 SUPPORT', 'ROSETTA 2 ONLY', 'NOT WORKING', 'NOT TESTED YET']
+      tabs: ['NATIVE M1 SUPPORT', 'ROSETTA 2 ONLY', 'NOT WORKING', 'NOT TESTED YET'],
+      heads: ['','Application','Developer','M1 optimized', 'Rosetta2', 'M1 Supported version', 'Last Update', 'Contribute']
     }
   },
   components: {

@@ -26,8 +26,8 @@
             <td><i :class="item.iconName"></i></td>
             <td>{{item.ApplicationName}}</td>
             <td>{{item.Developer}}</td>
-            <td>{{item.M1Optimized}}</td>
-            <td>{{item.Rosseta2}}</td>
+            <td><i :class="getSupportingButton(item.M1Optimized)"></i></td>
+            <td><i :class="getSupportingButton(item.Rosseta2)"></i></td>
             <td>{{item.M1SupportedVersion}}</td>
             <td>{{item.LastUpdate}}</td>
             <td><i class="fas fa-pencil-ruler"></i></td>
@@ -59,20 +59,19 @@ export default {
         } else {
             return '#d32f2f!important';
         }
+    },
+    getSupportingButton: function(val) {
+      if (val == null) {
+        return ''
+      } else if (val) {
+        return 'green-circle fas fa-check-circle'
+      } else {
+        return 'red-circle fas fa-check-circle'
+      }
     }
   },
   computed: {
-    // getTypeButtonColor: function(val) {
-    //     if (val == 'NATIVE M1 SUPPORT') {
-    //         return '#388e3c!important';
-    //     } else if (val == 'ROSETTA 2 ONLY') {
-    //         return '#fbc02d!important';
-    //     } else if (val == 'NOT WORKING') {
-    //         return '#d32f2f!important';
-    //     } else {
-    //         return '#d32f2f!important';
-    //     }
-    // }
+    
   }
 }
 </script>
@@ -80,7 +79,7 @@ export default {
 <style scoped>
 .typeButton {
   color: hsla(0,0%,100%,.6);
-
+  background-color: #1e1e1e;
 }
 .typeButton-selected {
   color: #2196f3;
@@ -95,5 +94,11 @@ td {
 span {
   width: 100%;
   background-color: hsla(0,0%,100%,.6);
+}
+.green-circle {
+  color: green;
+}
+.red-circle {
+  color: red;
 }
 </style>

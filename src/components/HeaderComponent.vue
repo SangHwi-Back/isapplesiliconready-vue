@@ -5,9 +5,11 @@
       <i class="fab fa-twitter"></i>
       <button v-on:click="clickSNSButton('coffee')" class="snsStyleButton"> <i class="fas fa-coffee"></i> BUY ME A COFFEE </button>
     </div>
-    <a href="/">
-      <img class="titleImage" src="../../public/Apple_new-m1-chip-graphic_11102020.jpg" alt="m1 chip Image">
-    </a>
+    <div style="align-content: center">
+      <a href="/">
+        <img class="titleImage" src="../../public/Apple_new-m1-chip-graphic_11102020.jpg" alt="m1 chip Image">
+      </a>
+    </div>
     <p class="title1">Is Apple silicon ready?</p>
     <p class="title2">The complete guide for MacOS Apps Optimized for M1 Apple Silicon Macs</p>
     <div style="align-content: center">
