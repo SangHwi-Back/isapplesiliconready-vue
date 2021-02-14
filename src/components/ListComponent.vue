@@ -20,8 +20,6 @@
           <th v-bind:key="head" v-for="head in propsTheads">{{head}}</th>
         </thead>
         <tbody>
-<!-- iconName, ApplicationName, Developer, M1 optimized, Rosseta 2, M1 Supported version, Last update, Contribute -->
-
           <tr v-bind:key="item" v-for="item in propsList">
             <td><i :class="item.iconName"></i></td>
             <td>{{item.ApplicationName}}</td>
@@ -47,17 +45,17 @@ export default {
   ],
   methods: {
     typeButtonClicked: function(val) {
-      console.log(val);
+      this.$emit('typeButtonClicked', val);
     },
     getTypeButtonColor: function(val) {
         if (val == 'NATIVE M1 SUPPORT') {
-            return '#388e3c!important';
+            return '#388e3c';
         } else if (val == 'ROSETTA 2 ONLY') {
-            return '#fbc02d!important';
+            return '#fbc02d';
         } else if (val == 'NOT WORKING') {
-            return '#d32f2f!important';
+            return '#d32f2f';
         } else {
-            return '#d32f2f!important';
+            return '#d32f2f';
         }
     },
     getSupportingButton: function(val) {
@@ -69,9 +67,6 @@ export default {
         return 'red-circle fas fa-check-circle'
       }
     }
-  },
-  computed: {
-    
   }
 }
 </script>

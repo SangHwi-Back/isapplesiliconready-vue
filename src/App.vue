@@ -3,6 +3,7 @@
     <HeaderComponents v-bind:propsLikes="likes"></HeaderComponents>
     <SearchBodyComponent></SearchBodyComponent>
     <ListComponent v-bind:propsTabs="tabs" v-bind:propsList="list" v-bind:propsTheads="heads"></ListComponent>
+    <EnvironmentComponent></EnvironmentComponent>
   </div>
 </template>
 
